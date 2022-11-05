@@ -5,4 +5,8 @@ export const IPC = {
       WHEN_WINDOW_CLOSE: 'windows: when-about-window-close',
     },
   },
+  DIGITALOCEAN: {
+    GET_TOKEN: 'digitalocean: get-token',
+    SET_TOKEN: 'digitalocean: set-token',
+  },
 }

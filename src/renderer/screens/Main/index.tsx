@@ -28,9 +28,6 @@ export function MainScreen() {
   }
 
   return (
-    <Container>
-      <Heading>Hi, {App.username || 'there'}! 👋</Heading>
       <ProgramsContainer />
-    </Container>
   )
 }
