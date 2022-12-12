@@ -9,4 +9,5 @@ export const IPC = {
     GET_TOKEN: 'digitalocean: get-token',
     SET_TOKEN: 'digitalocean: set-token',
   },
+  LOGGER: "logger: log"
 }

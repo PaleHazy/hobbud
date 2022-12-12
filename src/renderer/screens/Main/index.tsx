@@ -1,9 +1,9 @@
-import { useNavigate } from 'react-router-dom'
-import { useEffect } from 'react'
+import { useNavigate } from "react-router-dom"
+import { useEffect } from "react"
 
-import { Container, Heading, Button } from 'renderer/components'
-import { useWindowStore } from 'renderer/store'
-import { ProgramsContainer } from 'renderer/components/ProgramsContainer'
+import { Container, Heading, Button } from "renderer/components"
+import { useWindowStore } from "renderer/store"
+import { ProgramsContainer } from "renderer/components/ProgramsContainer"
 
 // The "App" comes from the context bridge in preload/index.ts
 const { App } = window
@@ -17,9 +17,12 @@ export function MainScreen() {
 
     App.whenAboutWindowClose(({ message }) => {
       console.log(message)
-
       store.setAboutWindowState(false)
     })
+
+    return () => {
+      App.cleanListeners()
+    }
   }, [])
 
   function openAboutWindow() {
@@ -27,7 +30,5 @@ export function MainScreen() {
     store.setAboutWindowState(true)
   }
 
-  return (
-      <ProgramsContainer />
-  )
+  return <ProgramsContainer />
 }
