@@ -17,13 +17,11 @@ const tsconfigPaths = tsconfigPathsPlugin({
 export default defineConfig({
   main: {
     plugins: [tsconfigPaths],
-
     build: {
       rollupOptions: {
         input: {
           index: resolve('src/main/index.ts'),
         },
-
         output: {
           dir: resolve(devPath, 'main'),
         },
@@ -33,7 +31,6 @@ export default defineConfig({
 
   preload: {
     plugins: [tsconfigPaths],
-
     build: {
       outDir: resolve(devPath, 'preload'),
     },

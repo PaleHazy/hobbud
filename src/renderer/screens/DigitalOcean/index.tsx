@@ -51,6 +51,14 @@ export function DigitalOceanScreen() {
       </Button>
       <Button
         onClick={async () => {
+          const account = await App.digitalOceanGetAccount()
+          console.log(account)
+        }}
+      >
+        Get Account
+      </Button>
+      <Button
+        onClick={async () => {
           const token = await App.digitalOceanGetToken()
           App.logger(token)
         }}

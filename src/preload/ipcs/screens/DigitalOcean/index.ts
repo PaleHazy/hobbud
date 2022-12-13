@@ -10,3 +10,7 @@ export function digitalOceanSetToken(token: string) {
   const channel = IPC.DIGITALOCEAN.SET_TOKEN
   ipcRenderer.invoke(channel, token)
 }
+
+export async function digitalOceanGetAccount() {
+  return ipcRenderer.invoke(IPC.DIGITALOCEAN.GET_ACCOUNT)
+}

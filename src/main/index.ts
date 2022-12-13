@@ -3,7 +3,8 @@ import { app, safeStorage } from 'electron'
 import { makeAppSetup, makeAppWithSingleInstanceLock } from './factories'
 import { registerLoggerIPC } from './logger'
 import { MainWindow, registerAboutWindowCreationByIPC } from './windows'
-import { registerDigitalOceanIPC } from './windows/DigitalOcean'
+import { registerDigitalOceanIPC } from './screens/DigitalOcean'
+import { registerKrakenIPC } from './screens/Kraken'
 
 makeAppWithSingleInstanceLock(async () => {
   await app.whenReady()
@@ -11,5 +12,6 @@ makeAppWithSingleInstanceLock(async () => {
 
   registerAboutWindowCreationByIPC()
   registerDigitalOceanIPC()
+  registerKrakenIPC()
   registerLoggerIPC()
 })

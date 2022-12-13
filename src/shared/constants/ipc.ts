@@ -8,6 +8,14 @@ export const IPC = {
   DIGITALOCEAN: {
     GET_TOKEN: 'digitalocean: get-token',
     SET_TOKEN: 'digitalocean: set-token',
+    GET_ACCOUNT: 'digitalocean: get-account',
   },
+  KRAKEN: {
+    GET_ACCOUNT: 'kraken: get-account',
+    GET_BALANCE: 'kraken: get-balance',
+    SIGN: 'kraken: sign',
+
+  },
+
   LOGGER: "logger: log"
 }
